@@ -454,11 +454,10 @@ html, body {
 
 .acss-sidebar {
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
   width: 100%;
   display: block;
   margin-left: 0;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   z-index: 990; }
   @media screen and (min-width: 768px) {
     .acss-sidebar {
@@ -484,6 +483,12 @@ html, body {
       width: calc(33.33333% - 15px);
       clear: none; } }
 
+  .acss-sidebar h1 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+      margin-bottom: 7px;
+    padding: 5px 15px; }
   .acss-sidebar a {
     color: white; }
   @media screen and (min-width: 960px) {
@@ -500,6 +505,8 @@ html, body {
     margin: 0; }
     .acss-sidebar ul li {
       position: relative; }
+      .acss-sidebar ul li:last-child {
+        margin-bottom: 25px; }
       .acss-sidebar ul li ul {
         margin-left: 15px; }
         .acss-sidebar ul li ul li a, .acss-sidebar ul li ul li input {
@@ -524,48 +531,43 @@ html, body {
           background: white;
           color: #333333;
           outline: 0px; }
-      .acss-sidebar ul li .tools {
-        display: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        padding: 5px 15px; }
-        .acss-sidebar ul li .tools span {
-          cursor: pointer;
-          display: inline-block;
-          text-align: center;
-          width: 15px;
-          border-radius: 50%;
-          position: relative; }
-          .acss-sidebar ul li .tools span .tooltip {
-            display: none;
-            position: absolute;
-            top: 30px;
-            right: 0px;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 5px;
-            color: #333333;
-            text-shadow: none;
-            border-radius: 3px;
-            z-index: 999; }
-          .acss-sidebar ul li .tools span:hover {
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.3), 1px -1px 1px rgba(0, 0, 0, 0.3), -1px -1px 1px rgba(0, 0, 0, 0.3); }
-            .acss-sidebar ul li .tools span:hover .tooltip {
-              display: block; }
       .acss-sidebar ul li.edit a, .acss-sidebar ul li.edit .tools {
         display: none; }
       .acss-sidebar ul li.edit a + input {
         display: block; }
-      .acss-sidebar ul li:hover .tools {
-        display: block; }
-      .acss-sidebar ul li:hover.edit .tools {
-        display: none; }
-  .acss-sidebar h1 {
-    font-size: 0.85rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    margin: 0;
+  .acss-sidebar .tools {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
     padding: 5px 15px; }
+    .acss-sidebar .tools span {
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      width: 15px;
+      border-radius: 50%;
+      position: relative; }
+      .acss-sidebar .tools span .tooltip {
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 0px;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 5px;
+        color: #333333;
+        text-shadow: none;
+        border-radius: 3px;
+        z-index: 999; }
+      .acss-sidebar .tools span:hover {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.3), 1px -1px 1px rgba(0, 0, 0, 0.3), -1px -1px 1px rgba(0, 0, 0, 0.3); }
+        .acss-sidebar .tools span:hover .tooltip {
+          display: block; }
+  .acss-sidebar ul li:hover .tools, .acss-sidebar h1:hover .tools {
+    display: block; }
+  .acss-sidebar ul li:hover.edit .tools, .acss-sidebar h1:hover.edit .tools {
+    display: none; }
 
 .acss-mainpane {
   width: 100%;
@@ -658,6 +660,8 @@ html, body {
     .acss-navbar ul li {
       list-style: none;
       margin: 0px 5px; }
+    .acss-navbar ul:first-child li:first-child a {
+      font-size: 1.25rem; }
 
 .acss-btn {
   padding: 4px 10px;
